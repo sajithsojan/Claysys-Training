@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <head>
-  <title>Login</title>
+  <title>Movieplix</title>
+  <link rel="icon" type="image/x-icon" href="movieplix-favicon.png">
+  <link rel="stylesheet" href="../Day 2/CSS_Task2_Login.css">
 </head>
 <style>
 
 
 </style>
 <body>
-  <div class="sign_in">
-    <p>Sign in to your account</p>
-    
-    <input type="text"  class="name" name="name" placeholder="Name">
-
-    <input type="password" class="password" name="password" placeholder="Password">
-
-    <a href="#">Forgot your password ?</a> 
-    <button>
-      Sign In
-    </button>
-
-  </div>
-
-  
+  <header class="page-header">
+      <div class="logo-div-class">
+          <nav>
+              <a href="#"><img src="movieplix-logo.png" alt="Logo"></a>
+          </nav>
+      </div>
+      <div class="nav-items-container">
+          <nav>
+              <ul>
+                  <li><a href="HTML_Task5_Sample_Website.html">Home</a></li>
+                  <li><a href="HTML_Task4_AboutUs.html">About</a></li>
+                  <li><a href="HTML_Task4_ContactUs.html">Contact us</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <main>
+      <div class="form-container">
+          <h2>Sign In</h2>
+          <form action="#">
+              <div class="form-user">
+                  <input type="text" required>
+                  <label>Email or phone number</label>
+              </div>
+              <div class="form-user">
+                  <input type="password" required>
+                  <label>Password</label>
+              </div>
+              <button type="submit">Sign In</button>
+              <div class="form-help"> 
+                  <div class="remember-me">
+                      <input type="checkbox" id="remember-me">
+                      <label for="remember-me">Remember me</label>
+                  </div> 
+                  <a href="#">Forgot Password?</a>
+              </div>
+          </form>
+          <div>
+              <p>New to Movieplix? <a href="HTML_Task3_Registration.html">Sign up now</a></p>
+              <small>
+                  This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                  <a href="#">Learn more.</a>
+              </small>
+          </div>
+      </div>
+  </main>
+  <footer class="footer-class"></footer>
 </body>
+</html>
 </html>

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: #000;
+    position: relative; 
+    height: 1000px;
+
+}
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background: url("netflix-background.jpg");
+    background-position: center;
+    z-index: -1;
+}
+.logo-div-class {
+    /* position: fixed; */
+    padding: 25px 60px;
+    z-index: 1;
+}
+
+
+.page-header {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color:rgba(0, 0, 0, 0.25);
+    position: relative; 
+    z-index: 2;
+}
+
+
+.logo-div-class nav a img {
+    width: 167px;
+    max-height: 50px; /* Adjust as needed */
+}
+
+
+.nav-items-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-weight: bold;
+    color: white;
+    gap: 16px; /* Space between links */
+}
+
+
+.nav-items-container ul li {
+    display: inline-block; 
+}
+
+
+.nav-items-container ul li a {
+    text-decoration: none;
+    color: #f9fffa;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+}
+
+
+.form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+}
+
+
+.form-container h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.form-container form {
+    margin: 25px 0 65px;
+}
+
+
+form .form-user {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+
+.form-user input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+
+.form-user input:is(:focus, :valid) {
+    background: #444;
+    padding: 16px 20px 0;
+}
+
+
+.form-user label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+
+.form-user input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+
+form button:hover {
+    background: #c40812;
+}
+
+
+.form-container a {
+    text-decoration: none;
+}
+
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+
+.form-container :where(label, p, small, a) {
+    color: #8c8c8c;
+}
+
+
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+form .remember-me {
+    display: flex;
+}
+
+
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+
+form .form-help :where(label, a) {
+    font-size: 0.9rem;
+}
+
+
+.form-container p a {
+    color: #fff;
+}
+
+
+.form-container small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+
+
+.form-container small a {
+    color: #0071eb;
+}
+
+
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+    nav, .form-container {
+        padding: 20px;
+    }
+    nav a img {
+        width: 140px;
+    }
+    .form-container {
+        width: 100%;
+        top: 43%;
+    }
+    .form-container form {
+        margin: 25px 0 40px;
+    }
+}

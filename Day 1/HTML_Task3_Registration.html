@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Registration</title>
+  <title>sign up</title>
 </head>
 <style>
 
@@ -8,28 +8,50 @@
 </style>
 <body>
   <div>
-    <form class="sign_up">
+    <form class="Signup">
       <p>Create your account</p>
-    
-      <input type="text"  class="first_name" name="first_name" placeholder="First Name">
-      <input type="text"  class="last_name" name="last_name" placeholder="Last Name">
-      <input type="date"  class="date_of_birth" name="date_of_birth" placeholder="Date of Birth">
-      <input type="number"  class="age" name="age" placeholder="Age">
       
-      <input type="radio" name="gender" value="male"> Male
-      <input type="radio" name="gender" value="female"> Female
-      
-      <input type="tel" class="phone_number" name="phone_number" placeholder="Phone Number">
-      <input type="email" class="email" name="email" placeholder="Email Address">
-      <input type="text" class="address" name="address" placeholder="Enter Your Address">
+      <div class="Name">
+        <input type="text"  class="Firstname" name="Firstname" placeholder="First Name"> 
 
-      <select name="state" id="state">
+        <input type="text"  class="Lastname" name="Lastname" placeholder="Last Name">
+      </div>
+      
+      <div class="Date">
+        <input type="date"  class="Dateofbirth" name="Dateofbirth" placeholder="Date of Birth">
+      </div>
+     
+      <div class="Age">
+        <input type="number"  class="Ageinput" name="age" placeholder="Age">
+      </div>
+      
+      <div class="Gender">
+        <label for="gender">Gender :</label>
+        <input type="radio" name="Genderinput" value="male"> Male
+        <input type="radio" name="Genderinput" value="female"> Female
+        <input type="radio" name="Genderinput" value="female"> Others  
+      </div>
+
+      <div class="Number">
+        <input type="tel" class="Phonenumber" name="Phonenumber" placeholder="Phone Number">
+      </div>
+      
+      <div class="Email">
+        <input type="email" class="Emailaddress" name="Emailaddress" placeholder="Email Address">
+      </div>
+
+      <div>
+        <textarea name="Address" id="Address">Address</textarea>
+      </div>
+      
+
+      <select class="state" name="state" id="state">
         <option value="" disabled selected>Select Your State</option>
         <option value="kerala">Kerala</option>
         <option value="tamil_nadu">Tamil Nadu</option>
       </select>
 
-      <select name="city" id="city">
+      <select class="city" name="city" id="city">
         <option value="" disabled selected>Select Your City</option>
         <option value="kerala">Kochi</option>
         <option value="tamil_nadu">Chennai</option>
