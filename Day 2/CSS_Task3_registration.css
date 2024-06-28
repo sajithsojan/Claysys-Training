@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+main{
+  min-height: 150vh;
+}
+body {
+    background: #000;
+    position: relative; 
+    height: 1000px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background: url("netflix-background.jpg");
+    background-position: center;
+    z-index: -1;
+}
+
+.logo-div-class {
+    padding: 25px 60px;
+    z-index: 1;
+}
+
+.page-header {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color:rgba(0, 0, 0, 0.25);
+    position: relative; 
+    z-index: 2;
+}
+
+.form-container-wrapper{
+  margin-top: 30px;
+}
+
+.logo-div-class nav a img {
+    width: 167px;
+    max-height: 50px;
+}
+
+.nav-items-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-weight: bold;
+    color: white;
+    gap: 16px;
+}
+
+.nav-items-container ul li {
+    display: inline-block; 
+}
+
+.nav-items-container ul li a {
+    text-decoration: none;
+    color: #f9fffa;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+}
+
+
+.form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+    margin-top: 220px;
+}
+
+.form-container h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-container form {
+    margin: 25px 0 65px;
+}
+
+.form-user {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-user input, .form-user textarea, .form-user select {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+.form-user input:focus, .form-user textarea:focus, .form-user select:focus {
+    background: #444;
+    padding: 16px 20px 0;
+}
+
+.form-user label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+.form-user input:focus ~ label, .form-user input:valid ~ label,
+.form-user textarea:focus ~ label, .form-user textarea:valid ~ label,
+.form-user select:focus ~ label, .form-user select:valid ~ label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+.gender{
+
+  color: #fff;
+  margin-bottom: 25px;
+  margin-top: 25px  ;
+}
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+form button:hover {
+    background: #c40812;
+}
+
+.form-container a {
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.form-container :where(label, p, small, a) {
+    color: #8c8c8c;
+}
+
+.form-container p a {
+  color: #fff;
+}
+
+.form-container small {
+  display: block;
+  margin-top: 15px;
+  color: #b3b3b3;
+}
+
+.form-container small a {
+  color: #0071eb;
+}
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 40px; /* Adjust padding for smaller screens */
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem; /* Adjust heading font size */
+    }
+
+    .form-user input, .form-user textarea, .form-user select {
+        font-size: 0.9rem; /* Adjust input font size */
+    }
+
+    .form-user label {
+        font-size: 0.9rem; /* Adjust label font size */
+    }
+
+    .form-container form button {
+        padding: 12px 0; /* Adjust button padding */
+    }
+}
+
+.page-footer {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color:rgba(96, 81, 81, 0.25);
+  position: relative; 
+  z-index: 2;
+}
+
+.company-info p{
+  color: snow;
+}
+
+.page-footer .logo-div-class.footer-logo nav a img {
+  width: 75px;  
+  height: auto;  
+}
+
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 10px; /* Adjust gap between icons as needed */
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav ul li a img {
+        width: 24px;  /* Set desired width */
+        height: 24px; /* Set desired height */
+        box-shadow: 0 4px 8px rgba(118, 100, 100, 0.2); /* Adds a wrapping shadow */
+        border-radius: 50%; /* Makes the shadow wrap around the image */
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+    }
+
+    nav ul li a img:hover {
+        transform: scale(1.1); /* Slightly enlarge the icon on hover */
+        box-shadow: 0 8px 16px rgba(197, 190, 172, 0.3); /* Intensifies shadow on hover */
+    }

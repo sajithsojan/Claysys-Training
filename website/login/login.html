@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="login.js" defer></script>
+
+</head>
+  <body onload="getcookiedata()">
+    <header>
+      <i class="fa-brands fa-blogger"></i>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/website/home/home.html">Home</a></li>
+          <li><a href="/website/about/about.html">About</a></li>
+          <li><a href="/website/contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+  <main>
+    <div class="form-wrapper">
+        <form class="login-form" action="#">
+          <div class="signin-title">
+            <h2>Sign In</h2>
+          </div>
+          
+          <div class="form-user">
+            <label for="username">Name :</label>
+            <input type="text" id="username" placeholder="Name" required>
+         
+            <p>Error Message</p>
+          </div>
+
+          <div class="form-user">
+            <label for="username">Password :</label>
+            <input type="password" id="password" placeholder="Password" required>
+            <p>Error Message</p>
+          </div>
+
+          <div class="remember-me-container">
+            <div class="remember-me-container">
+              <input type="checkbox" name="remember-me" id="remember-me" onclick="setcookie()">
+              <label for="remember-me">Remember me</label>
+            </div> 
+          </div>
+
+          
+          <div class="signin-forgot-container"> 
+            <button type="submit" id="submit">Sign In</button>
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <div class="sign-up-text">
+            <p>New to Bloggsy? <a href="/website/registration/registration.html">Sign up now</a></p>
+             <small>
+              This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+              <a href="#">Learn more.</a>
+             </small>
+          </div>
+        </form>
+          
+
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="social">
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-facebook"></i></a>
+      <a href=""><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <ul class="list">
+      <li>
+        <a href="#">Terms</a>
+      </li>
+      <li>
+        <a href="#">Privacy policy</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+    </ul>
+
+    <p class="copyright">Copyright 2024</p>
+  </footer>
+</body>
+</html>

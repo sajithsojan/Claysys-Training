@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="home.js" defer></script>
+
+</head>
+  <body onload="getcookiedata()">
+    <header>
+      <i class="fa-brands fa-blogger"></i>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/website/home/home.html">Home</a></li>
+          <li><a href="/website/about/about.html">About</a></li>
+          <li><a href="/website/contact/contact.html">Contact</a></li>
+          <li><a href="/website/login/login.html">Sign-in</a></li>
+          <li><a href="/website/registration/registration.html">Sign-up</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+  <main>
+
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="1.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="2.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="3.jpg" alt="Image 3"></div>
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+   
+  </main>
+
+
+  <footer class="footer">
+    <div class="social">
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-facebook"></i></a>
+      <a href=""><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <ul class="list">
+      <li>
+        <a href="#">Terms</a>
+      </li>
+      <li>
+        <a href="#">Privacy policy</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+    </ul>
+
+    <p class="copyright">Copyright 2024</p>
+  </footer>
+</body>
+</html>

@@ -1,70 +1,157 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>sign up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movieplix</title>
+  <link rel="icon" type="image/x-icon" href="movieplix-favicon.png">
+  <link rel="stylesheet" href="/Day 2/CSS_Task3_registration.css">
+  <!-- Added meta tags and fixed the favicon link -->
 </head>
-<style>
-
-
-</style>
 <body>
-  <div>
-    <form class="Signup">
-      <p>Create your account</p>
-      
-      <div class="Name">
-        <input type="text"  class="Firstname" name="Firstname" placeholder="First Name"> 
+  <header class="page-header">
+    <div class="logo-div-class">
+        <nav>
+            <a href="#"><img src="movieplix-logo.png" alt="Logo"></a>
+        </nav>
+    </div>
+    <div class="nav-items-container">
+        <nav>
+            <ul>
+                <li><a href="HTML_Task5_Sample_Website.html">Home</a></li>
+                <li><a href="HTML_Task4_AboutUs.html">About</a></li>
+                <li><a href="HTML_Task4_ContactUs.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
 
-        <input type="text"  class="Lastname" name="Lastname" placeholder="Last Name">
-      </div>
-      
-      <div class="Date">
-        <input type="date"  class="Dateofbirth" name="Dateofbirth" placeholder="Date of Birth">
-      </div>
-     
-      <div class="Age">
-        <input type="number"  class="Ageinput" name="age" placeholder="Age">
-      </div>
-      
-      <div class="Gender">
-        <label for="gender">Gender :</label>
-        <input type="radio" name="Genderinput" value="male"> Male
-        <input type="radio" name="Genderinput" value="female"> Female
-        <input type="radio" name="Genderinput" value="female"> Others  
-      </div>
-
-      <div class="Number">
-        <input type="tel" class="Phonenumber" name="Phonenumber" placeholder="Phone Number">
-      </div>
-      
-      <div class="Email">
-        <input type="email" class="Emailaddress" name="Emailaddress" placeholder="Email Address">
-      </div>
-
-      <div>
-        <textarea name="Address" id="Address">Address</textarea>
-      </div>
-      
-
-      <select class="state" name="state" id="state">
-        <option value="" disabled selected>Select Your State</option>
-        <option value="kerala">Kerala</option>
-        <option value="tamil_nadu">Tamil Nadu</option>
-      </select>
-
-      <select class="city" name="city" id="city">
-        <option value="" disabled selected>Select Your City</option>
-        <option value="kerala">Kochi</option>
-        <option value="tamil_nadu">Chennai</option>
-      </select>
-
-
-      <input type="password" class="password" name="password" placeholder="Password">
-      <input type="password" class="confirm_password" name="confirm_password" placeholder="Confirm Password">
-      
-      <input type="submit" value="Sign Up">
-
-  </form>
-</div>
+  <main>
+    <div class="form-container">
+      <form class="Signup">
+        <h2>Create your account</h2>
+        <div>
+          <div class="form-container-wrapper">
+            <!-- First name and Last name inputs -->
+            <div class="form-user">
+              <input type="text" class="first-name" required>
+              <label>First name</label>
+            </div>
+            
+            <div class="form-user">
+              <input type="text" class="last-name" required>
+              <label>Last name</label>
+            </div>
+          </div>
+          
+          <div class="form-user">
+            <!-- Date of Birth input -->
+            <input type="date" class="date-of-birth" name="Dateofbirth" required>
+            <label></label>
+          </div>
   
+          <div class="gender">
+            <!-- Gender radio inputs -->
+            <label for="gender">Gender :</label>
+            <input type="radio" name="Genderinput" value="male" class="gender-male"> Male
+            <input type="radio" name="Genderinput" value="female" class="gender-female"> Female
+            <input type="radio" name="Genderinput" value="others" class="gender-others"> Others  
+          </div>
+  
+          <div class="form-user">
+            <!-- Phone Number input -->
+            <input type="tel" class="phone-number" required>
+            <label>Phone Number</label>
+          </div>
+          
+          <div class="form-user">
+            <!-- Email Address input -->
+            <input type="email" class="email-address" required>
+            <label>Email Address</label>
+          </div>
+  
+          <div class="form-user">
+            <!-- Address textarea -->
+            <textarea name="Address" class="address" required></textarea>
+            <label>Address</label>
+          </div>
+          
+          <div class="form-user">
+            <!-- State select input -->
+            <select class="state" name="state" id="state" required>
+              <option value="" disabled selected></option>
+              <option value="kerala">Kerala</option>
+              <option value="tamil_nadu">Tamil Nadu</option>
+            </select>
+            <label>State</label>
+          </div>
+            
+          <div class="form-user">
+            <!-- City select input -->
+            <select class="city" name="city" id="city" required>
+              <option value="" disabled selected></option>
+              <option value="kochi">Kochi</option>
+              <option value="chennai">Chennai</option>
+            </select>
+            <label>City</label>
+          </div>
+          
+          <div>
+            <!-- Password and Confirm Password inputs -->
+            <div class="form-user">
+              <input type="password" class="user-password" required>
+              <label>Password</label>
+            </div>
+            
+            <div class="form-user">
+              <input type="password" class="user-confirm-password" required>
+              <label>Confirm Password</label>
+            </div>
+          </div>
+          
+          <div class="submit-button-container">
+            <!-- Signup button -->
+            <button type="submit" class="sign-up-button">Signup</button>
+          </div>
+          
+          <div class="member">
+            <!-- Sign in link -->
+            <p>Already a member at Movieplix? <a href="HTML_Task2_Login.html">Sign in</a></p>
+            <!-- Google reCAPTCHA notice -->
+            <small>
+                This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                <a href="#">Learn more.</a>
+            </small>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </main>
+  <footer class="page-footer ">
+    <div class="company-info">
+      <div class="logo-div-class footer-logo">
+        <nav>
+            <a href="#"><img src="movieplix-logo.png" alt="Logo"></a>
+        </nav>
+    </div>
+
+    <div>
+      <p>Copyright © 2024, Movieplix All Rights Reserved.</p>
+    </div>
+    </div>
+    
+    <div class="nav-social-container">
+      <nav>
+        <ul>
+            <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+        </ul>
+    </nav>
+    
+    </div>
+  </footer>
+
 </body>
 </html>

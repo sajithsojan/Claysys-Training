@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background: #000;
-    position: relative; 
-    height: 1000px;
-
+    position: relative;
 }
+
 body::before {
     content: "";
     position: absolute;
@@ -23,32 +30,35 @@ body::before {
     background-position: center;
     z-index: -1;
 }
-.logo-div-class {
-    /* position: fixed; */
-    padding: 25px 60px;
-    z-index: 1;
+
+header, footer {
+    flex-shrink: 0;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
 .page-header {
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color:rgba(0, 0, 0, 0.25);
-    position: relative; 
+    position: relative;
     z-index: 2;
 }
-
 
 .logo-div-class nav a img {
     width: 167px;
     max-height: 50px; /* Adjust as needed */
 }
-
 
 .nav-items-container ul {
     list-style: none;
@@ -60,11 +70,9 @@ body::before {
     gap: 16px; /* Space between links */
 }
 
-
 .nav-items-container ul li {
-    display: inline-block; 
+    display: inline-block;
 }
-
 
 .nav-items-container ul li a {
     text-decoration: none;
@@ -73,36 +81,27 @@ body::before {
     padding: 0.5rem 1rem;
 }
 
-
 .form-container {
-    position: absolute;
-    left: 50%;
-    top: 50%;
     border-radius: 4px;
     padding: 70px;
     width: 450px;
-    transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, .75);
 }
-
 
 .form-container h2 {
     color: #fff;
     font-size: 2rem;
 }
 
-
 .form-container form {
     margin: 25px 0 65px;
 }
-
 
 form .form-user {
     height: 50px;
     position: relative;
     margin-bottom: 16px;
 }
-
 
 .form-user input {
     height: 100%;
@@ -116,12 +115,10 @@ form .form-user {
     padding: 0 20px;
 }
 
-
 .form-user input:is(:focus, :valid) {
     background: #444;
     padding: 16px 20px 0;
 }
-
 
 .form-user label {
     position: absolute;
@@ -134,12 +131,10 @@ form .form-user {
     transition: all 0.1s ease;
 }
 
-
 .form-user input:is(:focus, :valid)~label {
     font-size: 0.75rem;
     transform: translateY(-130%);
 }
-
 
 form button {
     width: 100%;
@@ -156,53 +151,43 @@ form button {
     transition: 0.1s ease;
 }
 
-
 form button:hover {
     background: #c40812;
 }
-
 
 .form-container a {
     text-decoration: none;
 }
 
-
 .form-container a:hover {
     text-decoration: underline;
 }
 
-
 .form-container :where(label, p, small, a) {
     color: #8c8c8c;
 }
-
 
 form .form-help {
     display: flex;
     justify-content: space-between;
 }
 
-
 form .remember-me {
     display: flex;
 }
-
 
 form .remember-me input {
     margin-right: 5px;
     accent-color: #b3b3b3;
 }
 
-
 form .form-help :where(label, a) {
     font-size: 0.9rem;
 }
 
-
 .form-container p a {
     color: #fff;
 }
-
 
 .form-container small {
     display: block;
@@ -210,11 +195,9 @@ form .form-help :where(label, a) {
     color: #b3b3b3;
 }
 
-
 .form-container small a {
     color: #0071eb;
 }
-
 
 @media (max-width: 740px) {
     body::before {
@@ -228,9 +211,46 @@ form .form-help :where(label, a) {
     }
     .form-container {
         width: 100%;
-        top: 43%;
     }
     .form-container form {
         margin: 25px 0 40px;
     }
 }
+
+.page-footer {
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color:rgba(96, 81, 81, 0.25);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.company-info p {
+    color: snow;
+}
+
+.page-footer .logo-div-class.footer-logo nav a img {
+    width: 75px;  
+    height: auto;  
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px; /* Adjust gap between icons as needed */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a img {
+    width: 24px;  /* Set desired width */
+    height: 24px; /* Set desired height */
+    box-shadow: 0 4px 8px rgba(118, 100, 100, 0.2); /* Adds a wrapping shadow */
+    border-radius: 
